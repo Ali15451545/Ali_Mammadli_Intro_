@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Əli Məmmədli | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --whatsapp: #25d366;
+            --bg-color: #ffffff;
+            /* Arxa plan təmiz ağ */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            max-width: 400px;
+            /* Daha yığcam və səliqəli ölçü */
+            width: 100%;
+            border-radius: 25px;
+            /* Güclü və estetik kölgə effekti */
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12), 0 10px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            animation: popIn 0.7s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .info-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #94a3b8;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #334155;
+            margin-bottom: 25px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .skill-tag {
+            background: #f1f5f9;
+            color: var(--secondary);
+            padding: 6px 14px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        .result-box {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .score {
+            display: block;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 16px;
+            background: var(--whatsapp);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+            filter: brightness(1.05);
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #94a3b8;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="header">
+            <h1>Əli Məmmədli</h1>
+            <p>Kompüter Mühəndisliyi</p>
+        </div>
+
+        <div class="content">
+            <div class="info-title">Haqqımda</div>
+            <p class="description">
+                15 yaşım var. 12 ay müddətində <b>"Jet School"</b> kursunda təhsil almışam. Nəzəri və praktik biliklərə
+                sahibəm. Eyni zamanda 8-ci sinif şagirdiyəm.
+            </p>
+
+            <div class="info-title">Texniki Biliklər</div>
+            <div class="skills-list">
+                <span class="skill-tag">İT Əsasları</span>
+                <span class="skill-tag">Alqoritmik Təfəkkür</span>
+                <span class="skill-tag">Scratch Game Dev</span>
+                <span class="skill-tag">Veb Dizayn</span>
+                <span class="skill-tag">Veb Proqramlaşdırma</span>
+                <span class="skill-tag">Python Core</span>
+                <span class="skill-tag">Kibertəhlükəsizlik</span>
+            </div>
+
+            <div class="result-box">
+                <span class="score" id="scoreValue">0</span>
+                <p style="font-size: 0.85rem; color: #64748b;">OTK 8-9 Sınaq Nəticəsi</p>
+            </div>
+
+            <a href="https://wa.me/994555405826" class="whatsapp-btn" target="_blank">
+                WhatsApp ilə əlaqə saxla
+            </a>
+
+            <div class="footer">
+                © 2026 Əli Məmmədli | Digital Portfolio
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Bal animasiyası (1-dən 200-ə qədər)
+        function animateCounter() {
+            const el = document.getElementById('scoreValue');
+            const target = 200;
+            let current = 0;
+            const duration = 1000; // 1 saniyə
+            const increment = target / (duration / 16);
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    el.innerText = target + "+";
+                    clearInterval(timer);
+                } else {
+                    el.innerText = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        window.onload = animateCounter;
+    </script>
+</body>
+
+</html>
